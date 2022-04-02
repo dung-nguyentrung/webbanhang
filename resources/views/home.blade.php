@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('main')
+@section('content')
 <!-- Hero slider-->
 <section class="tns-carousel tns-controls-lg">
     <div class="tns-carousel-inner"
