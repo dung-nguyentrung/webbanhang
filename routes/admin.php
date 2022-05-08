@@ -4,7 +4,9 @@ use App\Http\Controllers\Admin\{
     CategoryController,
     DashboardController,
     PermissionController,
+    ProductController,
     RoleController,
+    SizeController,
     SubCategoryController,
     UserController
 };
@@ -29,3 +31,9 @@ Route::resource('categories', CategoryController::class);
 
 //Sub Categories
 Route::resource('sub_categories', SubCategoryController::class);
+
+//Sizes
+Route::resource('sizes', SizeController::class);
+
+//products
+Route::resource('products', ProductController::class);

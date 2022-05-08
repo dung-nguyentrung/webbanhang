@@ -11,7 +11,8 @@
     <link rel="stylesheet" href="{{ asset('assets/css/backend-plugin.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/vendor/@fortawesome/fontawesome-free/css/all.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/vendor/line-awesome/dist/line-awesome/css/line-awesome.min.css') }}">
+    <link rel="stylesheet"
+        href="{{ asset('assets/vendor/line-awesome/dist/line-awesome/css/line-awesome.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/vendor/remixicon/fonts/remixicon.css') }}">
     <link rel="stylesheet" href="http://cdn.bootcss.com/toastr.js/latest/css/toastr.min.css">
     @stack('styles')
@@ -63,52 +64,68 @@
                             </a>
                             <ul id="product" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
                                 @can('permission_access')
-                                <li class="">
-                                    <a href="{{ route('permissions.index') }}">
-                                        <img src="{{ asset('assets/images/icons/permission.png') }}"
-                                            class="icon-left-bar" alt="Permission">
-                                        <i class="las la-minus"></i><span>Quyền truy cập</span>
-                                    </a>
-                                </li>
+                                    <li class="">
+                                        <a href="{{ route('permissions.index') }}">
+                                            <img src="{{ asset('assets/images/icons/permission.png') }}"
+                                                class="icon-left-bar" alt="Permission">
+                                            <i class="las la-minus"></i><span>Quyền truy cập</span>
+                                        </a>
+                                    </li>
                                 @endcan
                                 @can('role_access')
-                                <li class="">
-                                    <a href="{{ route('roles.index') }}">
-                                        <img src="{{ asset('assets/images/icons/role.png') }}" class="icon-left-bar"
-                                            alt="Role">
-                                        <i class="las la-minus"></i><span>Vai trò</span>
-                                    </a>
-                                </li>
+                                    <li class="">
+                                        <a href="{{ route('roles.index') }}">
+                                            <img src="{{ asset('assets/images/icons/role.png') }}" class="icon-left-bar"
+                                                alt="Role">
+                                            <i class="las la-minus"></i><span>Vai trò</span>
+                                        </a>
+                                    </li>
                                 @endcan
                                 @can('user_access')
-                                <li class="">
-                                    <a href="{{ route('users.index') }}">
-                                        <img src="{{ asset('assets/images/icons/list-user.png') }}"
-                                            class="icon-left-bar" alt="Role">
-                                        <i class="las la-minus"></i><span>Người dùng</span>
-                                    </a>
-                                </li>
+                                    <li class="">
+                                        <a href="{{ route('users.index') }}">
+                                            <img src="{{ asset('assets/images/icons/list-user.png') }}"
+                                                class="icon-left-bar" alt="Role">
+                                            <i class="las la-minus"></i><span>Người dùng</span>
+                                        </a>
+                                    </li>
                                 @endcan
                             </ul>
                         </li>
                         @can('category_access')
-                        <li class="">
-                            <a href="{{ route('categories.index') }}" class="svg-icon">
-                                <img src="{{ asset('assets/images/icons/category.png') }}" class="icon-left-bar"
-                                    alt="Category">
-                                <span class="ml-4">Danh mục</span>
-                            </a>
-                        </li>
+                            <li class="">
+                                <a href="{{ route('categories.index') }}" class="svg-icon">
+                                    <img src="{{ asset('assets/images/icons/category.png') }}" class="icon-left-bar"
+                                        alt="Category">
+                                    <span class="ml-4">Danh mục</span>
+                                </a>
+                            </li>
                         @endcan
                         @can('sub_category_access')
+                            <li class="">
+                                <a href="{{ route('sub_categories.index') }}" class="svg-icon">
+                                    <img src="{{ asset('assets/images/icons/category.png') }}" class="icon-left-bar"
+                                        alt="Sub Category">
+                                    <span class="ml-4">Danh mục con</span>
+                                </a>
+                            </li>
+                        @endcan
+                        @can('size_access')
+                            <li class="">
+                                <a href="{{ route('sizes.index') }}" class="svg-icon">
+                                    <img src="{{ asset('assets/images/icons/size.png') }}" class="icon-left-bar"
+                                        alt="Size">
+                                    <span class="ml-4">Kích thước</span>
+                                </a>
+                            </li>
+                        @endcan
                         <li class="">
-                            <a href="{{ route('sub_categories.index') }}" class="svg-icon">
-                                <img src="{{ asset('assets/images/icons/category.png') }}" class="icon-left-bar"
-                                    alt="Sub Category">
-                                <span class="ml-4">Danh mục con</span>
+                            <a href="{{ route('products.index') }}" class="svg-icon">
+                                <img src="{{ asset('assets/images/icons/product.png') }}" class="icon-left-bar"
+                                    alt="Size">
+                                <span class="ml-4">Kích thước</span>
                             </a>
                         </li>
-                        @endcan
                     </ul>
                 </nav>
                 <div class="p-3"></div>

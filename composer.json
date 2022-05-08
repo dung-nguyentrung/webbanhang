@@ -9,6 +9,7 @@
         "barryvdh/laravel-debugbar": "^3.6",
         "brian2694/laravel-toastr": "^5.57",
         "bumbummen99/shoppingcart": "^4.1",
+        "ckfinder/ckfinder-laravel-package": "^3.5",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
         "laravel/framework": "^8.54",

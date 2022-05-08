@@ -2,9 +2,8 @@
 
 namespace App\Providers;
 
-use App\Models\User;
 use App\Models\Category;
-use App\Observers\UserObserver;
+use Illuminate\Database\Schema\Builder;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 
@@ -29,5 +28,6 @@ class AppServiceProvider extends ServiceProvider
     {
         $categories = Category::with(['media', 'subCategories.category'])->get();
         View::share('categories', $categories);
+        Builder::defaultStringLength(191);
     }
 }
