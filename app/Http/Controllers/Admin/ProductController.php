@@ -5,6 +5,7 @@ namespace App\Http\Controllers\admin;
 use App\Http\Controllers\Controller;
 use App\Models\Category;
 use App\Models\Product;
+use App\Models\Size;
 use App\Models\SubCategory;
 use Illuminate\Http\Request;
 
@@ -30,7 +31,9 @@ class ProductController extends Controller
     {
         $categories = Category::all();
         $subCategories = SubCategory::all();
-        return view('admin.products.create', compact('categories', 'subCategories'));
+        $sizes = Size::all();
+
+        return view('admin.products.create', compact('categories', 'subCategories', 'sizes'));
     }
 
     /**

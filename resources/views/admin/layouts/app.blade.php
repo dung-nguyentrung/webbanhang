@@ -121,9 +121,9 @@
                         @endcan
                         <li class="">
                             <a href="{{ route('products.index') }}" class="svg-icon">
-                                <img src="{{ asset('assets/images/icons/product.png') }}" class="icon-left-bar"
-                                    alt="Size">
-                                <span class="ml-4">Kích thước</span>
+                                <img src="{{ asset('assets/images/icons/products.png') }}" class="icon-left-bar"
+                                    alt="Sản phẩm">
+                                <span class="ml-4">Sản phẩm</span>
                             </a>
                         </li>
                     </ul>

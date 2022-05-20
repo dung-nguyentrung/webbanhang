@@ -4,21 +4,17 @@ namespace App\View\Components;
 
 use Illuminate\View\Component;
 
-class Input extends Component
+class Radio extends Component
 {
     public $name;
-    public $field;
-    public $length;
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct($name, $field, $length)
+    public function __construct($name)
     {
         $this->name = $name;
-        $this->field = $field;
-        $this->length = $length;
     }
 
     /**
@@ -28,6 +24,6 @@ class Input extends Component
      */
     public function render()
     {
-        return view('components.input');
+        return view('components.radio');
     }
 }
